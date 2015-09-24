@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="E:\Downloads\Github\Udacity\SuperDuo\FootballScores\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="E:\Downloads\Github\Udacity\SuperDuo\FootballScores\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-d31c72e68be5b3c4ecb5c44313c3d5e175c6a76c.jar" />
+    </item>
+    <item
+        jar="E:\Downloads\Github\Udacity\SuperDuo\FootballScores\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="E:\Downloads\Github\Udacity\SuperDuo\FootballScores\app\build\intermediates\pre-dexed\debug\classes-62becfc1c566afb48998ebe42eb2c9194fab73a3.jar" />
+    </item>
+    <item
+        jar="E:\Downloads\Github\Udacity\SuperDuo\FootballScores\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="E:\Downloads\Github\Udacity\SuperDuo\FootballScores\app\build\intermediates\pre-dexed\debug\classes-74e9a610ed5031ea3aa47d38a17966a1a0b059ae.jar" />
+    </item>
+    <item
+        jar="E:\Software\Matrix\Android\AndroidSDK\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="E:\Downloads\Github\Udacity\SuperDuo\FootballScores\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-2b22eb89221af32de87d91887ace5993f650a8e8.jar" />
+    </item>
+
+</items>
