@@ -8,5 +8,8 @@
     <string name="tomorrow">Mañana</string>
     <string name="unkown_league">Desconocido Liga</string>
 
+    <string name="no_match_today">Sin el Partido Hoy En Día</string>
+    <string name="match_today_subtitle">El Partidos Hoy En Día</string>
+    <string name="content_description_share_button">El botón para compartir información de el partido</string>
 
 </resources>

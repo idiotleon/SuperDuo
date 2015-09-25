@@ -10,7 +10,7 @@
 
     <string name="no_match_today">No Match Today</string>
     <string name="match_today_subtitle">Matches Today</string>
-    <string name="content_description_share_button">Button for sharing match info</string>
+    <string name="content_description_share_button">The button for sharing match info</string>
 
     <string name="champions_league" translatable="false">UEFA Champions League</string>
     <string name="bundesliga" translatable="false">Bundesliga</string>
