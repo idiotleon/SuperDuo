@@ -101,21 +101,21 @@ public class BookDetail extends Fragment implements LoaderManager.LoaderCallback
             shareIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.share_text) + bookTitle);
             shareActionProvider.setShareIntent(shareIntent);
         } else {
-            ((TextView) rootView.findViewById(R.id.fullBookTitle)).setVisibility(View.INVISIBLE);
+            (rootView.findViewById(R.id.fullBookTitle)).setVisibility(View.INVISIBLE);
         }
 
         String bookSubTitle = data.getString(data.getColumnIndex(AlexandriaContract.BookEntry.SUBTITLE));
         if (bookSubTitle != null) {
             ((TextView) rootView.findViewById(R.id.fullBookSubTitle)).setText(bookSubTitle);
         } else {
-            ((TextView) rootView.findViewById(R.id.fullBookSubTitle)).setVisibility(View.INVISIBLE);
+            (rootView.findViewById(R.id.fullBookSubTitle)).setVisibility(View.INVISIBLE);
         }
 
         String desc = data.getString(data.getColumnIndex(AlexandriaContract.BookEntry.DESC));
         if (desc != null)
             ((TextView) rootView.findViewById(R.id.fullBookDesc)).setText(desc);
         else
-            ((TextView) rootView.findViewById(R.id.fullBookDesc)).setVisibility(View.INVISIBLE);
+            (rootView.findViewById(R.id.fullBookDesc)).setVisibility(View.INVISIBLE);
 
         String authors = data.getString(data.getColumnIndex(AlexandriaContract.AuthorEntry.AUTHOR));
         if (authors != null) {
@@ -123,7 +123,7 @@ public class BookDetail extends Fragment implements LoaderManager.LoaderCallback
             ((TextView) rootView.findViewById(R.id.authors)).setLines(authorsArr.length);
             ((TextView) rootView.findViewById(R.id.authors)).setText(authors.replace(",", "\n"));
         } else {
-            ((TextView) rootView.findViewById(R.id.authors)).setVisibility(View.INVISIBLE);
+            (rootView.findViewById(R.id.authors)).setVisibility(View.INVISIBLE);
         }
         String imgUrl = data.getString(data.getColumnIndex(AlexandriaContract.BookEntry.IMAGE_URL));
         if (Patterns.WEB_URL.matcher(imgUrl).matches()) {
@@ -135,7 +135,7 @@ public class BookDetail extends Fragment implements LoaderManager.LoaderCallback
         if (categories != null) {
             ((TextView) rootView.findViewById(R.id.categories)).setText(categories);
         } else {
-            ((TextView) rootView.findViewById(R.id.categories)).setVisibility(View.INVISIBLE);
+            (rootView.findViewById(R.id.categories)).setVisibility(View.INVISIBLE);
         }
 
         if (rootView.findViewById(R.id.right_container) != null) {
