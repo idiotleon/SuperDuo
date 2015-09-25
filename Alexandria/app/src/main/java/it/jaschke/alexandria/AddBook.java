@@ -67,12 +67,6 @@ public class AddBook extends Fragment implements LoaderManager.LoaderCallbacks<C
         rootView = inflater.inflate(R.layout.fragment_add_book, container, false);
         ean = (EditText) rootView.findViewById(R.id.ean);
 
-        Bundle bundle = getArguments();
-        if (bundle != null) {
-            String isbnScanned = bundle.getString(MainActivity.ISBN_SCANNED);
-            ean.setText(isbnScanned);
-        }
-
         ean.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -108,6 +102,12 @@ public class AddBook extends Fragment implements LoaderManager.LoaderCallbacks<C
                 }
             }
         });
+
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            String isbnScanned = bundle.getString(MainActivity.ISBN_SCANNED);
+            ean.setText(isbnScanned);
+        }
 
         rootView.findViewById(R.id.scan_button).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -188,9 +188,13 @@ public class AddBook extends Fragment implements LoaderManager.LoaderCallbacks<C
         ((TextView) rootView.findViewById(R.id.bookSubTitle)).setText(bookSubTitle);
 
         String authors = data.getString(data.getColumnIndex(AlexandriaContract.AuthorEntry.AUTHOR));
-        String[] authorsArr = authors.split(",");
-        ((TextView) rootView.findViewById(R.id.authors)).setLines(authorsArr.length);
-        ((TextView) rootView.findViewById(R.id.authors)).setText(authors.replace(",", "\n"));
+        if (authors != null) {
+            String[] authorsArr = authors.split(",");
+            ((TextView) rootView.findViewById(R.id.authors)).setLines(authorsArr.length);
+            ((TextView) rootView.findViewById(R.id.authors)).setText(authors.replace(",", "\n"));
+        } else {
+            (rootView.findViewById(R.id.authors)).setVisibility(View.INVISIBLE);
+        }
         String imgUrl = data.getString(data.getColumnIndex(AlexandriaContract.BookEntry.IMAGE_URL));
         if (Patterns.WEB_URL.matcher(imgUrl).matches()) {
             new DownloadImage((ImageView) rootView.findViewById(R.id.bookCover)).execute(imgUrl);
